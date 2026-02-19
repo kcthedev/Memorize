@@ -8,7 +8,7 @@ struct EmojiMemorizeGameView: View {
     var body: some View {
         VStack {
             cards
-                .foregroundColor(viewModel.color)
+                .foregroundColor(AppTheme.primaryColor)
             HStack {
                 score
                 Spacer()
@@ -97,7 +97,7 @@ struct EmojiMemorizeGameView: View {
             .onTapGesture {
                 deal()
             }
-            .foregroundColor(viewModel.color)
+            .foregroundColor(AppTheme.primaryColor)
             .accessibilityElement(children: .combine)
             .accessibilityIdentifier("deck")
         }

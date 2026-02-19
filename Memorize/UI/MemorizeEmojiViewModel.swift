@@ -20,8 +20,6 @@ class MemorizeEmojiViewModel: ObservableObject {
         memorizeGame.cards
     }
     
-    var color: Color = .orange
-    
     var score: Int {
         memorizeGame.score
     }

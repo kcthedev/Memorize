@@ -31,15 +31,40 @@ struct MemorizeTests {
         #expect(game.cards[1].isMatched)
     }
 
-    @Test mutating func testChooseTwoUnmatchingCards() {
+    @Test mutating func testChooseTwoUnmatchingUnseenCards() {
         game.choose(0)
         game.choose(2)
 
         // Flipping cards back handled by the ViewModel
         #expect(game.shouldFlipBack)
+        game.turnUnmatchedCardsDown()
+        
         #expect(game.score == 0)
 
         #expect(!game.cards[0].isMatched)
         #expect(!game.cards[2].isMatched)
+    }
+
+    @Test mutating func testChooseTwoUnmatchingSeenCards() {
+        game.choose(0)
+        game.choose(2)
+
+        // Flipping cards back handled by the ViewModel
+        #expect(game.shouldFlipBack)
+        game.turnUnmatchedCardsDown()
+        
+        #expect(game.score == 0)
+        
+        game.choose(0)
+        game.choose(2)
+        
+        #expect(game.shouldFlipBack)
+        #expect(game.score == -2)
+
+        #expect(!game.cards[0].isMatched)
+        #expect(!game.cards[2].isMatched)
+        
+        #expect(game.cards[0].hasBeenSeen)
+        #expect(game.cards[2].hasBeenSeen)
     }
 }

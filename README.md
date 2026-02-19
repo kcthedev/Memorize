@@ -1,6 +1,6 @@
 # Memorize
 
-[![Swift6_3_2](https://img.shields.io/badge/Swift-6.3.2-ff69b4)]() [![SwiftUI](https://img.shields.io/badge/SwiftUI-lightgray)](https://developer.apple.com/swiftui/) [![MVVM](https://img.shields.io/badge/MVVM-red)]() [![UnitTest](https://img.shields.io/badge/Swift_Testing-blue)]() [![UITests](https://img.shields.io/badge/XCTests-orange)]() 
+[![Swift6_3_2](https://img.shields.io/badge/Swift-6.3.2-ff69b4)]() [![SwiftUI](https://img.shields.io/badge/SwiftUI-lightgray)](https://developer.apple.com/swiftui/) [![MVVM](https://img.shields.io/badge/MVVM-red)]() [![UnitTest](https://img.shields.io/badge/Swift_Testing-blue)](https://developer.apple.com/xcode/swift-testing/) [![UITests](https://img.shields.io/badge/XCTests-orange)](https://developer.apple.com/documentation/xctest) 
 
 A light-weight version of the classic memorize game! Scoring based on time to make a correct guess.
 

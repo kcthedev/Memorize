@@ -8,8 +8,7 @@ final class MemorizeUITests: XCTestCase {
 
     override func tearDownWithError() throws {}
 
-    @MainActor
-    func testDeckTap() throws {
+    func testDeckTapCauseItToDisappear() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
